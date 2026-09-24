@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog Details</title>
+
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="index.html" class="back-btn">← Back to Blogs</a>
+
+        <div id="blog-box" class="blog-card"></div>
+
+        <div class="update-blog">
+
+            <h2>Update Blog</h2>
+
+            <input
+                type="text"
+                id="update-title"
+                placeholder="Enter new title">
+
+            <input
+                type="text"
+                id="update-author"
+                placeholder="Enter new author">
+
+            <textarea
+                id="update-content"
+                rows="8"
+                placeholder="Enter new content">
+            </textarea>
+
+            <button id="update-blog-btn">Update Blog</button>
+
+            <button id="delete-blog-btn">Delete Blog</button>
+
+        </div>
+
+        <div class="comments-section">
+
+            <h2>Comments</h2>
+
+            <div id="comments-box"></div>
+
+            <div class="add-comment">
+
+                <h2>Add Comment</h2>
+
+                <input
+                    type="text"
+                    id="comment-name"
+                    placeholder="Your name">
+
+                <textarea
+                    id="comment-text"
+                    rows="5"
+                    placeholder="Write a comment">
+                </textarea>
+
+                <button id="add-comment-btn">Add Comment</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script2.js"></script>
+
+</body>
+
+</html>

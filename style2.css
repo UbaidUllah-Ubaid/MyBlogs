@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    background-color: #f4fff3;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+
+/* Back Button */
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: rgb(7, 136, 7);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+
+/* Blog */
+
+.blog-card {
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(198, 255, 207, 0.384);
+    margin-bottom: 30px;
+}
+
+.blog-card h1 {
+    color: rgb(7, 136, 7);
+    margin-bottom: 15px;
+}
+
+.blog-card p {
+    line-height: 1.7;
+}
+
+.blog-content {
+    white-space: pre-line;
+    font-size: 17px;
+}
+
+
+/* Update Blog */
+
+.update-blog {
+    background-color: rgba(189, 231, 189, 0.596);
+    padding: 25px;
+    border: 1px solid rgb(9, 187, 9);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.update-blog h2 {
+    color: green;
+    margin-top: 0;
+}
+
+.update-blog input,
+.update-blog textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(153, 214, 147, 0.541);
+    border: 1px solid rgb(9, 187, 9);
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.update-blog input:focus,
+.update-blog textarea:focus {
+    outline: none;
+    border: 2px solid rgb(7, 136, 7);
+}
+
+
+/* Buttons */
+
+button {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#update-blog-btn {
+    background-color: rgb(7, 136, 7);
+    color: white;
+    margin-right: 10px;
+}
+
+#update-blog-btn:hover {
+    background-color: rgb(5, 105, 5);
+}
+
+#delete-blog-btn {
+    background-color: rgb(190, 70, 70);
+    color: white;
+}
+
+#delete-blog-btn:hover {
+    background-color: rgb(160, 50, 50);
+}
+
+
+/* Comments Section */
+
+.comments-section {
+    background-color: rgba(198, 255, 207, 0.384);
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.comments-section h2 {
+    color: rgb(7, 136, 7);
+}
+
+
+/* Single Comment */
+
+.comment-card {
+    background-color: rgba(189, 231, 189, 0.596);
+    border: 1px solid rgb(9, 187, 9);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+.comment-card h3 {
+    color: rgb(7, 136, 7);
+    margin-top: 0;
+}
+
+.comment-card p {
+    margin: 8px 0;
+}
+
+.delete-comment-btn {
+    background-color: rgb(190, 70, 70);
+    color: white;
+    margin-top: 5px;
+}
+
+.delete-comment-btn:hover {
+    background-color: rgb(160, 50, 50);
+}
+
+
+/* Add Comment */
+
+.add-comment {
+    background-color: rgba(189, 231, 189, 0.596);
+    border: 1px solid rgb(9, 187, 9);
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.add-comment h2 {
+    color: green;
+}
+
+.add-comment input,
+.add-comment textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(153, 214, 147, 0.541);
+    border: 1px solid rgb(9, 187, 9);
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.add-comment input:focus,
+.add-comment textarea:focus {
+    outline: none;
+    border: 2px solid rgb(7, 136, 7);
+}
+
+#add-comment-btn {
+    background-color: rgb(7, 136, 7);
+    color: white;
+}
+
+#add-comment-btn:hover {
+    background-color: rgb(5, 105, 5);
+}

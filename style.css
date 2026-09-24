@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4fff3;
+    color: #244d24;
+}
+
+
+/* Navbar */
+
+.header {
+    background-color: rgba(172, 253, 161, 0.685);
+    min-height: 70px;
+    padding: 0 35px;
+    border-bottom: 1px solid rgba(9, 187, 9, 0.25);
+}
+
+.navbar-brand {
+    color: rgb(7, 136, 7);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* Main */
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.page-heading {
+    text-align: center;
+    color: rgb(7, 136, 7);
+    margin-bottom: 35px;
+}
+
+
+/* Blogs */
+
+.blogs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-card {
+    background-color: rgba(198, 255, 207, 0.384);
+
+    border: 1px solid rgba(9, 187, 9, 0.3);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 12px rgba(7, 136, 7, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+     transform: translateX(10px);
+}
+
+.blog-card h2 {
+    color: rgb(7, 136, 7);
+    margin-top: 0;
+}
+
+.author {
+    color: #416641;
+    font-weight: bold;
+}
+
+.blog-preview {
+    line-height: 1.7;
+    color: #416641;
+}
+
+
+/* Read More */
+
+.read-more {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    background-color: rgb(9, 187, 9);
+
+    color: white;
+
+    padding: 9px 16px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+}
+
+.read-more:hover {
+    background-color: rgb(7, 136, 7);
+    color: white;
+}
+
+
+/* Create Blog */
+
+.form-container {
+    margin-top: 60px;
+
+    background-color: rgba(189, 231, 189, 0.596);
+
+    border: 1px solid rgb(9, 187, 9);
+
+    border-radius: 12px;
+
+    padding: 30px;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: rgb(7, 136, 7);
+    margin-bottom: 25px;
+}
+
+#blogForm input,
+#blogForm textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid rgb(9, 187, 9);
+
+    border-radius: 7px;
+
+    background-color: rgba(153, 214, 147, 0.541);
+
+    outline: none;
+}
+
+#blogForm input:focus,
+#blogForm textarea:focus {
+    background-color: white;
+
+    box-shadow: 0 0 0 3px rgba(9, 187, 9, 0.12);
+}
+
+#blogForm button {
+    display: block;
+
+    margin: auto;
+
+    padding: 10px 22px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: rgb(9, 187, 9);
+
+    color: white;
+
+    cursor: pointer;
+}
+
+#blogForm button:hover {
+    background-color: rgb(7, 136, 7);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0 15px;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .blog-card {
+        padding: 18px;
+    }
+}
