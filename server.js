@@ -3,20 +3,29 @@
 
 import express from 'express';
 import cors from 'cors';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import swaggerUi from 'swagger-ui-express';
 import blogRoutes from './routes/blogs.js';
 import swaggerSpec from './swagger.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+const frontendFiles = new Set([
+  '404.html',
+  'index.html',
+  'index2.html',
+  'script.js',
+  'script2.js',
+  'style.css',
+  'style2.css',
+]);
 
 // CORS lets your frontend (running on a different port, for example
 // Live Server on http://127.0.0.1:5500) call this API from the browser.
 // Without this line the browser blocks the request.
 app.use(cors());
-
-// Serve the frontend from the same port as the API.
-app.use(express.static('.'));
 
 // Lets the server read JSON that the frontend sends in the request body,
 // so `req.body` is a normal JavaScript object.
@@ -57,6 +66,19 @@ app.get('/api/health', (req, res) => {
 
 // All the blog and comment endpoints, mounted under /api
 app.use('/api', blogRoutes);
+
+// Serve only the frontend files, not source code or the database file.
+app.get('/', (req, res) => {
+  res.sendFile(path.join(projectRoot, 'index.html'));
+});
+
+app.get('/:filename', (req, res, next) => {
+  if (!frontendFiles.has(req.params.filename)) {
+    return next();
+  }
+
+  res.sendFile(path.join(projectRoot, req.params.filename));
+});
 
 // If no route above matched, the URL is wrong.
 app.use((req, res) => {

@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: blogs-backend
+    runtime: node
+    plan: starter
+    buildCommand: npm ci
+    startCommand: npm start
+    disk:
+      name: blog-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: '22'
+      - key: DATABASE_PATH
+        value: /var/data/blog.db

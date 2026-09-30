@@ -353,3 +353,20 @@ curl -X POST http://localhost:3000/api/blogs/1/comments \
 # delete a blog
 curl -X DELETE http://localhost:3000/api/blogs/1
 ```
+
+## 8. Deploying from GitHub
+
+This repository includes a Render Blueprint in `render.yaml`. It deploys the
+website and API together, so the frontend's `/api` requests continue to work on
+the public URL. The SQLite database is stored on a persistent disk, and the
+current five blogs and eight comments are loaded only when that database is new.
+
+1. Push this repository to GitHub.
+2. In Render, choose **New > Blueprint** and select this GitHub repository.
+3. Review the Blueprint and create the service. The persistent disk requires a
+  paid Render instance.
+4. Open the URL Render gives you. Add `/api/blogs` to the same URL to check the
+  backend response.
+
+Do not run `npm run seed` on the deployed database: that command resets all
+blogs and comments to the examples in `seed.js`.
